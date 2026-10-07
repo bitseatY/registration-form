@@ -1,147 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins','sans serif' ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-   display: flex;
-   height: 100vh;
-   justify-content: center;
-   align-items: center;
-   background:linear-gradient(135deg ,rgba(0, 174, 255, 0.479),rgba(0, 26, 255, 0.658));
-   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(135deg ,rgb(233, 225, 231) ,rgb(224, 201, 224))
 }
 .container{
- max-width: 700px;
- width:100%;
- background-color: white;
-padding: 25px 30px;
- border-radius: 5px;
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    padding:20px;
+    box-shadow: 0 4px 10px rgb(66, 63, 63);
 }
 .container .title{
-    font-size: 25px;
+    color:rgb(199, 57, 80);
+     font-size: 25px;
+     font-weight: 600;
+     padding: 10px;
+}
+.container .input .info-name {
     font-weight: 500;
-    position:relative;
+    margin:5px 0;
+    color: rgb(102, 50, 58);
 }
-.container .title::before{
-   content: '';
-   width:30px;
-   height: 3px;
-   position: absolute;
-   left:0 ;
-   bottom: 0;
-   background:linear-gradient(135deg ,rgba(0, 174, 255, 0.479),rgba(0, 26, 255, 0.658))
-
-}
-.container form .user-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
-    
-}
-form .user-details .input-box{
-    width:calc(100%/2 - 20px);
-    margin-bottom: 15px;
-}
-form .user-details .input-box input{
-    height: 45px;
+.container .input input{
     width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border-bottom-width:2px;
-    transition: all 0.3sec ease;
+    height: 30px;
 }
-form .user-details .input-box .details{
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-    border:1px solid #ccc;
-    padding-left: 15px;
-    font-size: 16px;
 
 
-}
-form .user-details .input-box input:focus,
-form .user-details .input-box input:valid{
-   border-color:rgba(0, 26, 255, 0.658) ;
- 
-}
-form .gender-details .gender-title{
-   font-size: 20px;
-   font-weight: 500;
-
-
-}
-form .gender-details .category{
-   
-    width:80%;
-    display: flex;
-    margin:14px 0;
-    justify-content: space-between;
-  
-}
-.gender-details .category label{
-  display: flex;
-  align-items: center;
-}
-.gender-details .category .dot{
-    height: 18px;
-    width:18px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.432);
-    margin-right: 10px;
-    border:5px solid transparent;
-    transition: all 0.3 sec ease;
-}
-#dot-1:checked ~ .category  label .one,
-#dot-2:checked ~ .category  label .two,
-#dot-3:checked ~ .category  label .three{
-    border-color: #d9d9d9;
-    background: #9b59b6;
-}
-form input[type="radio"]{
-    display:none;
-}
-form .button{
-    height: 45px;
-    margin:45px 0;
-}
-form .button input{
-    height: 100%;
+.container .btn  {
     width:100%;
-    outline: none;
-    color:#fff;
-    border:none;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    background-color:rgb(199, 57, 80) ;
     border-radius: 5px;
-    background: linear-gradient(135deg ,rgba(0, 174, 255, 0.479),rgba(0, 26, 255, 0.658));
-
+     height: 50px;
+     border: none;
+     margin:20px 0;
+      text-align: center;
+      cursor: pointer;
 }
-form .button input:hover{
-     background: linear-gradient(-135deg ,rgba(0, 174, 255, 0.479),rgba(0, 26, 255, 0.658));
-
-}
-@media (max-width:584px){
-    .container{
-        max-width: 700px;
-    }
-    form .user-details .input-box{
-        margin-bottom: 15px;
-        width:100%;
-    }
-    form .gender-details .category{
-        width: 100%;
-    }
-    .container form .user-details{
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-    .user-details::-webkit-scrollbar{
-        width:0;
-    }
+.container .btn .sub{
+    
+    font-size: 18px;
+    color:white;
+   
 }
